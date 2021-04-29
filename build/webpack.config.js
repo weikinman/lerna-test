@@ -59,7 +59,7 @@ const config = {
     },
     externals,
     plugins: [
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new VueLoaderPlugin(),
         // new BundleAnalyzerPlugin(),
         // new HtmlWebpackPlugin({

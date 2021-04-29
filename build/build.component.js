@@ -60,7 +60,7 @@ const runBuild = async() => {
             if (noElPrefixFile.test(name)) {
                 return `lib/${compName}/index.js`
             }
-            return `lib/el-${compName}/index.js`
+            return `lib/${compName}/index.js`
         }
         console.log('getOutFile', getOutFile());
         const outOptions = {
@@ -69,7 +69,7 @@ const runBuild = async() => {
             paths(id) {
                 if (/^@vue-fw-lerna/.test(id)) {
                     if (noElPrefixFile.test(id)) return id.replace('@vue-fw-lerna', '..')
-                    return id.replace('@vue-fw-lerna/', '../el-')
+                    return id.replace('@vue-fw-lerna/', '../')
                 }
             },
         }
