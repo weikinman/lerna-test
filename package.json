@@ -1,13 +1,14 @@
 {
     "name": "vue-fw-lerna",
     "private": true,
+    "version": "0.0.5",
     "scripts": {
         "cz": "npx git-cz",
         "test": "jest",
         "gen": "bash ./scripts/gc.sh",
         "bootstrap": "yarn --frozen-lockfile && npx lerna bootstrap && yarn gen:version",
         "gen:version": "node build/gen-version.js",
-        "build": "yarn bootstrap && yarn build:esm-bundle && yarn build:lib-full && yarn build:lib && yarn build:esm",
+        "build": "yarn bootstrap && yarn clean:lib && yarn build:esm-bundle && yarn build:lib-full && yarn build:lib && yarn build:esm",
         "clean:lib": "rimraf lib",
         "build:lib": "cross-env LIBMODE=core webpack --config ./build/webpack.config.js",
         "build:lib-full": "cross-env LIBMODE=full webpack --config ./build/webpack.config.js",
@@ -128,6 +129,11 @@
         "mitt": "^2.1.0",
         "normalize-wheel": "^1.0.1",
         "resize-observer-polyfill": "^1.5.1"
+    },
+    "command": {
+        "bootstrap": {
+            "hoist": true
+        }
     },
     "files": [
         "lib",
