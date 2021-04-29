@@ -62,17 +62,17 @@ const config = {
         new CleanWebpackPlugin(),
         new VueLoaderPlugin(),
         // new BundleAnalyzerPlugin(),
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-            filename: 'index.html',
-            //  favicon:'./src/assets/image/favicon.ico'
-        }),
-        new CopyWebpackPlugin([{ //不需要打包的静态资源
-            from: 'public',
-            to: '',
-            toType: 'dir',
-            ignore: publicCopyIgnore
-        }])
+        // new HtmlWebpackPlugin({
+        //     template: './public/index.html',
+        //     filename: 'index.html',
+        //     //  favicon:'./src/assets/image/favicon.ico'
+        // }),
+        // new CopyWebpackPlugin([{ //不需要打包的静态资源
+        //     from: 'public',
+        //     to: '',
+        //     toType: 'dir',
+        //     ignore: publicCopyIgnore
+        // }])
     ],
 }
 

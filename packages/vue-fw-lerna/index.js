@@ -1,4 +1,4 @@
-import utils from "@vue-fw-lerna/utils";
+import { utils } from "@vue-fw-lerna/tools";
 
 let components = [];
 
