@@ -10,11 +10,11 @@ const install = (app, opt) => {
 
     components.forEach(component => {
         app.component(component.name, component)
-    })
+    });
 
     plugins.forEach(plugin => {
         app.use(plugin)
-    })
+    });
 }
 
 export {
