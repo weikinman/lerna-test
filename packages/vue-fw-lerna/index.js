@@ -7,7 +7,7 @@ let plugins = [];
 const install = (app, opt) => {
     const option = Object.assign(defaultInstallOpt, opt)
     app.config.globalProperties.$ELEMENT = option;
-
+    'test';
     components.forEach(component => {
         app.component(component.name, component)
     });
