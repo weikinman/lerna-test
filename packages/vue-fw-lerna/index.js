@@ -11,7 +11,7 @@ const install = (app, opt) => {
     components.forEach(component => {
         app.component(component.name, component)
     });
-
+    'ffff'
     plugins.forEach(plugin => {
         app.use(plugin)
     });
