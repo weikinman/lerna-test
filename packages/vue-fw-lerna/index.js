@@ -12,6 +12,7 @@ const install = (app, opt) => {
         app.component(component.name, component)
     });
     'ffff'
+    '125125125';
     plugins.forEach(plugin => {
         app.use(plugin)
     });
